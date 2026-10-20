@@ -26,7 +26,10 @@
  ['About Qartexa','À propos de Qartexa','Company • Kigali • Rwanda','about.html'],
  ['How We Deliver','Notre méthode','Delivery • Discovery • Implementation • Support','about.html#how-we-deliver'],
  ['Technology Ecosystem','Écosystème technologique','Technology partners • Ecosystem','ecosystem.html'],
- ['Contact','Contact','Request a consultation • Info@qartexa.com','contact.html']
+ ['Contact','Contact','Request a consultation • Info@qartexa.com','contact.html'],
+ ['Privacy Policy','Politique de confidentialité','Personal data • Your rights • Data protection','privacy.html'],
+ ['Terms of Use','Conditions d’utilisation','Website terms • Intellectual property • Liability','terms.html'],
+ ['Cookie Preferences','Préférences en matière de cookies','Cookies • Tracking • Your choices','cookies.html']
  ];
  const labels={
   en:{button:'Search this website',title:'Search Qartexa',placeholder:'Search solutions, industries, technologies…',submit:'Search',close:'Close',hint:'Type a keyword to search the whole website, or browse the catalog below.',empty:'Please enter a keyword to search, or browse the catalog below.',none:q=>'No pages found for “'+q+'”. Try another keyword or browse the catalog.',count:(n,q)=>n+(n===1?' page':' pages')+' match “'+q+'”',all:'All pages',cats:{solutions:'Solutions',industries:'Industries',company:'Company'},browse:'Browse the catalog',open:'Open page'},
@@ -59,6 +62,9 @@
   'about.html':'<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>',
   'about.html#how-we-deliver':'<circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M8 18h6a3.500 3.500 0 0 0 0-7h-4a3.500 3.500 0 0 1 0-7h6"/>',
   'ecosystem.html':'<circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v5M12 12l-6 5.500M12 12l6 5.500"/>',
+  'privacy.html':'<path d="M12 3 4 6v6c0 4.5 3.3 7.8 8 9 4.7-1.2 8-4.5 8-9V6l-8-3z"/><rect x="9" y="11" width="6" height="5" rx="1"/><path d="M10 11V9.500a2 2 0 0 1 4 0V11"/>',
+  'terms.html':'<path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5M9 13h6M9 17h6"/>',
+  'cookies.html':'<path d="M21 12.500A9 9 0 1 1 11.500 3a4 4 0 0 0 5 5 3 3 0 0 0 4.500 4.500z"/><path d="M8.500 10.500h.01M12 15h.01M8 15.500h.01M15.500 14h.01"/>',
   'contact.html':'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>'};
  const CATICON={all:'<rect x="4" y="4" width="6.500" height="6.500" rx="1.500"/><rect x="13.500" y="4" width="6.500" height="6.500" rx="1.500"/><rect x="4" y="13.500" width="6.500" height="6.500" rx="1.500"/><rect x="13.500" y="13.500" width="6.500" height="6.500" rx="1.500"/>',solutions:ICON['solutions/digital-infrastructure.html'],industries:ICON['industries/index.html'],company:ICON['about.html']};
  const catOf=u=>u.startsWith('solutions/')?'solutions':u.startsWith('industries/')?'industries':'company';

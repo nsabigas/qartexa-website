@@ -603,3 +603,48 @@ footer .social-block{display:flex;flex-direction:column;align-items:flex-start;w
 footer .social-block h4.social-title{margin:0 0 14px}
 footer .social-block .social-links{gap:10px;margin:0}
 footer .social-block .social-handle{align-self:stretch;margin:14px 0 0;text-align:center;font-size:14px;font-weight:600;letter-spacing:.3px;line-height:1.2;color:#b8cde1}
+
+/* ===== Legal pages & footer legal links ===== */
+.copyright{flex-wrap:wrap;align-items:center;gap:10px 28px}
+.copyright .legal-links{display:flex;flex-wrap:wrap;gap:8px 20px;margin:0 auto 0 0}
+.copyright .legal-links a{color:#a9c4dc;font-size:12px;text-decoration:none;border-bottom:1px solid transparent}
+.copyright .legal-links a:hover{color:#fff;border-bottom-color:var(--red)}
+.copyright .legal-links a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.form-privacy a{color:var(--navy);font-weight:700;text-decoration:underline}
+.legal-hero{padding:56px 0 44px}
+.legal-hero .lead{max-width:760px}
+.legal-hero h1{font-size:clamp(34px,4.4vw,54px)}
+.legal-updated{margin:14px 0 0;color:var(--muted);font-size:14px}
+.legal-body{padding:56px 0 84px;background:#fff}
+.legal-layout{display:grid;grid-template-columns:250px minmax(0,780px);gap:56px;align-items:start}
+.legal-toc{position:sticky;top:110px;padding:20px 18px;border:1px solid var(--line);border-radius:14px;background:#f7fafd}
+.legal-toc strong{display:block;margin-bottom:10px;font-size:12px;letter-spacing:1px;text-transform:uppercase;color:var(--red)}
+.legal-toc ol{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.legal-toc a{display:block;padding:7px 10px;border-radius:8px;color:var(--navy);font-size:14px;font-weight:600;line-height:1.35;text-decoration:none}
+.legal-toc a:hover{background:#e8f1f8}
+.legal-toc a:focus-visible{outline:3px solid var(--navy);outline-offset:1px}
+.legal-glance{margin:0 0 36px;padding:22px 24px;border-left:4px solid var(--red);border-radius:0 12px 12px 0;background:#f3f8fc}
+.legal-glance strong{display:block;margin-bottom:8px;color:var(--navy);font-size:15px}
+.legal-glance ul{margin:0;padding-left:20px}
+.legal-glance li{margin:6px 0;color:#2c4660;line-height:1.55}
+.legal-content h2{display:flex;align-items:baseline;gap:12px;margin:42px 0 14px;padding-top:6px;font-size:clamp(22px,2.4vw,28px);line-height:1.25;color:var(--navy);scroll-margin-top:110px;max-width:none}
+.legal-content .legal-n{flex:none;display:inline-grid;place-items:center;width:30px;height:30px;border-radius:8px;background:var(--navy);color:#fff;font-size:14px;font-weight:700}
+.legal-content p{margin:0 0 14px;color:#2c4660;font-size:16.5px;line-height:1.75;max-width:none}
+.legal-content ul{margin:0 0 16px;padding-left:22px}
+.legal-content li{margin:8px 0;color:#2c4660;font-size:16.5px;line-height:1.7}
+.legal-content a{color:var(--red);font-weight:600;text-decoration:underline;text-underline-offset:3px}
+.legal-content a:hover{color:#a30000}
+.legal-content a:focus-visible{outline:3px solid var(--navy);outline-offset:2px}
+@media(max-width:960px){.legal-layout{grid-template-columns:1fr;gap:28px}.legal-toc{position:static}.legal-toc ol{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.legal-toc{display:none}.legal-toc ol{grid-template-columns:1fr}.legal-body{padding:36px 0 56px}.legal-content p,.legal-content li{font-size:16px}}
+
+/* ===== Phone/tablet hero: animated effects stay on; the photo itself keeps its original, un-zoomed framing ===== */
+@media(max-width:900px){
+ .hero-visual .frame{animation:none!important;will-change:auto;background-size:cover!important;background-position:62% center!important}
+ .hero-fx{display:block}
+ .hero-fx .fx-grid{background-size:30px 30px,30px 30px}
+}
+
+/* ===== Fix: decorative circle in call-to-action boxes was blocking clicks on the button ===== */
+.cta-box:after,.phase4-cta-box:after,.cta:after{pointer-events:none}
+.cta-box .btn,.cta .btn{position:relative;z-index:2}
